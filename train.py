@@ -15,7 +15,7 @@ import random
 import numpy as np
 
 # ---------------- CONFIG ---------------- #
-DATA_DIR = "/home/op_7231/Nikhil/Nikh-l_test/Fast_Reid_Training/arc/data/market1501/train_improved"  # folder structure: /class_name/image.jpg
+DATA_DIR = "D:\Nikhil\My_project\train_improved"  # folder structure: /class_name/image.jpg
 BATCH_SIZE = 128#64
 NUM_EPOCHS = 50
 LR = 3.5e-4
@@ -207,6 +207,5 @@ for epoch in range(NUM_EPOCHS):
     print(f"Epoch [{epoch+1}/{NUM_EPOCHS}], Loss: {total_loss:.4f}, Acc: {acc:.4f}")
 
 # ---------------- SAVE MODEL ---------------- #
-# torch.save(model.state_dict(), "reid_best_model_50_epochs_128_batch_256.pth")
-torch.save(model.state_dict(), "reid_best_model_50_epochs_128_batch_512_ATM.pth")
+torch.save(model.state_dict(), "reid_best_model_50_epochs_128_batch_512.pth")
 print("? Training complete. Model saved.")
